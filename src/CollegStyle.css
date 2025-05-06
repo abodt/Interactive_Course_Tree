@@ -1,0 +1,146 @@
+
+:root {
+  --main-color: #94bcd6;
+  --accent-color: #b9d2e1;
+  --background-color: #f4f4f9;
+  --button-bg: #c8d7de;
+  --text-dark: #333;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-inset: inset 6px 6px 10px rgba(0, 0, 0, 0.1),
+                  inset -6px -6px 10px rgba(255, 255, 255, 0.7);
+  --border-radius: 15px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* الحاوية الرئيسية */
+.college-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* صورة العنوان */
+.college-container-img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  margin-bottom: 30px;
+}
+
+/* العنوان الرئيسي */
+.college-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* قائمة الكليات */
+.college-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* زر الكلية */
+
+  .college-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 280px;
+    min-height: 260px;
+    background: var(--button-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    padding:5px 5px 5px 5px; 
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+  }
+
+.college-button:hover {
+  background: var(--button-bg); 
+  transform: scale(1.03);      
+  box-shadow: var(--shadow-inset);
+}
+.college-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.college-icon,
+.college-name,
+.college-description {
+  margin-top: 0;
+}
+/* أيقونة الكلية */
+.college-icon {
+
+  font-size: 2.5rem;
+  color: #000;
+  
+}
+
+
+/* اسم الكلية */
+.college-name {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--main-color);
+ 
+}
+
+/* وصف الكلية */
+.college-description {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* الحاوية أثناء التحميل */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  flex-direction: column;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid var(--main-color);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 20px;
+  color: var(--text-dark);
+  text-align: center;
+}

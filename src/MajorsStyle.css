@@ -1,0 +1,203 @@
+:root {
+  --main-color: #94bcd6;
+  --accent-color: #b9d2e1;
+  --background-color: #f4f4f9;
+  --button-bg: #c8d7de;
+  --text-dark: #333;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-inset: inset 6px 6px 10px rgba(0, 0, 0, 0.1),
+                  inset -6px -6px 10px rgba(255, 255, 255, 0.7);
+  --border-radius: 15px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* الحاوية الرئيسية */
+.majors-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* شريط العودة */
+.back-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #e0e0e0;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  
+}
+
+/* زر العودة */
+.back-button {
+  font-family: var(--font-primary);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  opacity: 0.7;
+
+}
+
+/* عنوان الصفحة */
+.majors-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin: 30px 0 20px;
+  text-align: center;
+}
+
+/* قائمة التخصصات */
+.majors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* بطاقة التخصص */
+.major-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 280px;
+  min-height: 260px;
+  background: var(--button-bg);
+  border: none;
+  border-radius: var(--border-radius);
+  padding:5px 5px 5px 5px; 
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.major-card:hover {
+  background-color: var(--accent-color);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+}
+
+/* اسم التخصص */
+.major-name {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* وصف التخصص */
+.major-description {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* عدد الساعات */
+.major-hours {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 8px;
+  font-family: var(--font-primary);
+}
+
+/* زر عرض الخطة */
+.show-plan {
+  margin-top: 10px;
+  color: #444;
+  font-weight: bold;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.show-plan:hover {
+  text-decoration: underline;
+}
+
+/* معلومات الجامعة */
+.university-link {
+  font-size: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-primary);
+}
+
+.university-link:hover {
+  text-decoration: underline;
+}
+
+/* معلومات الاتصال */
+.contact-info {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #888;
+}
+
+/*التذييل*/
+.footer {
+  font-family: var(--font-primary);
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 60px;
+  border-radius: var(--radius);
+}
+/*تصميم للتحميل*/
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+.loader {
+  border: 6px solid #f3f3f3; 
+  border-top: 6px solid var(--main-color); 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.loading-text {
+  font-size: 18px;
+  margin-top: 20px;
+  color: var(--text-color);
+  text-align: center;
+  font-family: var(--font-primary);
+}
